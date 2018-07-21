@@ -45,4 +45,11 @@ defmodule Cards do
     end
   end
 
+  def create_hand(hand_size) do
+    # |> Pipe Operator
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
+  end
+
 end
